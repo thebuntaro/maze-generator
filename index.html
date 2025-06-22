@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Maze Generator</h1>
+        <div class="controls" style="gap: 10px 18px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 10px;">
+                <label>Width: <input type="number" id="mazeWidth" value="10" min="4" max="50"></label>
+                <label>Height: <input type="number" id="mazeHeight" value="10" min="4" max="50"></label>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <label style="flex-direction:column; align-items:flex-start;">
+                    <span>
+                        <input type="checkbox" id="borderModeToggle" checked>
+                        Border mode
+                    </span>
+                    <span style="font-size:0.93em; color:#555; margin-left:22px;">(uncheck for path mode)</span>
+                </label>
+                <label style="flex-direction:column; align-items:flex-start;">
+                    <span>
+                        <input type="checkbox" id="entranceExitToggle" checked>
+                        Add entrance/exit
+                    </span>
+                    <span style="font-size:0.93em; color:#555; margin-left:22px;">(adds/removes entrance and exit)</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="removeDeadEndsToggle">
+                    Remove dead ends
+                </label>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 6px;">
+                <button id="generateBtn">Generate Maze</button>
+                <button id="savePngBtn">Save as PNG</button>
+            </div>
+        </div>
+        <canvas id="mazeCanvas"></canvas>
+    </div>
+    <script src="events.js"></script>
+    <script>
+        // Generate initial maze
+        renderMaze(true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    background: #f7f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 540px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+    padding: 32px 32px 24px 32px;
+}
+h1 {
+    text-align: center;
+    font-size: 2.1em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    color: #2d3a4a;
+    user-select: none;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    user-select: none;
+}
+.controls > div {
+    display: flex;
+    gap: 10px;
+    user-select: none;
+}
+.controls label {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #f3f6fa;
+    border-radius: 6px;
+    padding: 4px 10px;
+    user-select: none;
+}
+.controls input[type="number"],
+.controls input[type="checkbox"],
+.controls button {
+    user-select: none;
+}
+.controls input[type="number"] {
+    width: 54px;
+    padding: 3px 6px;
+    border: 1px solid #bfc7d1;
+    border-radius: 4px;
+    font-size: 1em;
+    background: #fff;
+}
+.controls input[type="checkbox"] {
+    accent-color: #0074D9;
+    width: 16px;
+    height: 16px;
+}
+#generateBtn {
+    background: linear-gradient(90deg, #0074D9 60%, #2ECC40 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.2s;
+}
+#generateBtn:hover {
+    background: linear-gradient(90deg, #005fa3 60%, #27ae60 100%);
+}
+#savePngBtn {
+    background: linear-gradient(90deg, #2ECC40 60%, #0074D9 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.2s;
+}
+#savePngBtn:hover {
+    background: linear-gradient(90deg, #27ae60 60%, #005fa3 100%);
+}
+#mazeCanvas {
+    display: block;
+    margin: 24px auto 0 auto;
+    background: #fafdff;
+    border: 2px solid #bfc7d1;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px 2vw 12px 2vw;
+    }
+    #mazeCanvas {
+        width: 98vw !important;
+        height: auto !important;
+        max-width: 98vw !important;
+    }
+}
